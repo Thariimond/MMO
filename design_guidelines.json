@@ -1,0 +1,166 @@
+{
+  "theme": "dark",
+  "archetype": "7 (Electric & Neon)",
+  "mood": "Action-packed, energetic, vibrant sci-fi/anime mashup",
+  "colors": {
+    "background": {
+      "base": "#0A0B10",
+      "surface": "#13151F",
+      "surfaceGlass": "rgba(19, 21, 31, 0.7)",
+      "panel": "#1A1D2B"
+    },
+    "primary": {
+      "main": "#00F0FF",
+      "glow": "rgba(0, 240, 255, 0.5)",
+      "dark": "#008A99",
+      "text": "#00F0FF"
+    },
+    "secondary": {
+      "main": "#FFB800",
+      "glow": "rgba(255, 184, 0, 0.5)",
+      "dark": "#996E00",
+      "text": "#FFB800"
+    },
+    "accent": {
+      "powerRed": "#FF003C",
+      "deepPurple": "#8A2BE2",
+      "neonMagenta": "#FF00FF"
+    },
+    "text": {
+      "primary": "#FFFFFF",
+      "secondary": "#A0A5B5",
+      "disabled": "#4A4D5E",
+      "inverse": "#000000"
+    },
+    "border": {
+      "default": "#2A2D3E",
+      "active": "#00F0FF",
+      "warning": "#FFB800"
+    }
+  },
+  "typography": {
+    "fonts": {
+      "heading": "Outfit, 'Space Grotesk', sans-serif",
+      "body": "Inter, 'Roboto', sans-serif",
+      "mono": "'JetBrains Mono', monospace"
+    },
+    "hierarchy": {
+      "h1": "text-4xl sm:text-5xl font-black tracking-tighter uppercase",
+      "h2": "text-2xl sm:text-3xl font-bold tracking-tight uppercase",
+      "h3": "text-xl font-bold tracking-tight",
+      "h4": "text-lg font-semibold",
+      "body": "text-base font-normal",
+      "small": "text-sm font-medium",
+      "overline": "text-xs font-bold tracking-[0.2em] uppercase"
+    }
+  },
+  "components": {
+    "buttons": {
+      "primary": "bg-primary-main text-black font-black uppercase tracking-wider rounded-md border-2 border-primary-main hover:bg-transparent hover:text-primary-main hover:shadow-[0_0_15px_rgba(0,240,255,0.6)] transition-all active:scale-95",
+      "secondary": "bg-transparent text-secondary-main font-bold uppercase tracking-wide rounded-md border-2 border-secondary-main hover:bg-secondary-main hover:text-black hover:shadow-[0_0_15px_rgba(255,184,0,0.6)] transition-all active:scale-95",
+      "upgrade": "bg-accent-deepPurple text-white font-bold rounded-lg border border-accent-neonMagenta hover:shadow-[0_0_20px_rgba(255,0,255,0.5)] transition-all flex flex-col items-center justify-center p-3 relative overflow-hidden"
+    },
+    "cards": {
+      "base": "bg-background-surface border border-border-default rounded-xl overflow-hidden",
+      "glass": "bg-background-surfaceGlass backdrop-blur-xl border border-white/10 rounded-xl",
+      "sciFiPanel": "bg-background-panel border-l-4 border-primary-main rounded-r-lg shadow-lg relative before:absolute before:top-0 before:right-0 before:w-4 before:h-4 before:border-t-2 before:border-r-2 before:border-primary-main/50"
+    },
+    "badges": {
+      "notification": "bg-accent-powerRed text-white text-[10px] font-bold px-1.5 py-0.5 rounded-full absolute -top-1 -right-1 border border-background-base",
+      "level": "bg-primary-dark text-primary-main text-xs font-bold px-2 py-1 rounded-sm uppercase tracking-widest border border-primary-main/30"
+    }
+  },
+  "layout": {
+    "screen_structure": {
+      "top": "h-[10vh] min-h-[80px] w-full fixed top-0 z-50 flex items-center justify-between px-4 bg-gradient-to-b from-background-base to-transparent",
+      "center": "h-[70vh] w-full flex items-center justify-center relative mt-[10vh]",
+      "bottom": "h-[20vh] min-h-[100px] w-full fixed bottom-0 z-50 bg-background-surfaceGlass backdrop-blur-xl border-t border-white/10 rounded-t-3xl pb-safe",
+      "safeArea": "pb-safe pt-safe"
+    },
+    "spacing": "Generous padding for thumb reachability (p-4 to p-6). Compact lists (gap-2) to fit more upgrades."
+  },
+  "animation": {
+    "orb_idle": "animate-[pulse_3s_ease-in-out_infinite]",
+    "orb_tap": "active:scale-90 transition-transform duration-75",
+    "particle_burst": "absolute w-4 h-4 bg-secondary-main rounded-full blur-[2px] animate-[ping_0.5s_cubic-bezier(0,0,0.2,1)_forwards]",
+    "screen_shake": "animate-[shake_0.5s_ease-in-out]",
+    "power_up_flash": "absolute inset-0 bg-primary-main/20 animate-[pulse_0.3s_ease-in-out]"
+  },
+  "icons": {
+    "library": "lucide-react",
+    "style": "Sharp, technical, glowing accents. Use colors to differentiate states.",
+    "sizing": "Bottom tab: 24px, Upgrades: 32px, Stats: 16px"
+  },
+  "screens": {
+    "Login": {
+      "layout": "Full-screen background image, bottom-aligned content.",
+      "elements": "Game Logo (large uppercase typography), 'Sign in with Google' button (glassmorphism style with G icon), Terms links."
+    },
+    "MainGame": {
+      "layout": "Top HUD for currencies/level. Center massive tappable orb/character. Bottom sheet/tabs for upgrades.",
+      "elements": "Ki Energy/sec counter, Total Energy, Tappable Orb, Floating +1 damage text on tap, upgrade shortcuts."
+    },
+    "Upgrades": {
+      "layout": "Scrollable list inside a bottom sheet or dedicated tab.",
+      "elements": "Building rows (Icon, Name, Level, Next Cost, CPS boost, Buy Button). Highlight affordable upgrades."
+    },
+    "Profile": {
+      "layout": "Top heavy avatar showcase, stats grid below.",
+      "elements": "Anime Avatar (large, glowing border), Power Level badge, Achievements bento grid."
+    },
+    "Leaderboard": {
+      "layout": "List layout with top 3 highlighted.",
+      "elements": "Podium for Top 1-3, dense list for 4-100, current player rank pinned at bottom."
+    }
+  },
+  "testID_conventions": {
+    "format": "kebab-case, role-based",
+    "examples": [
+      "login-google-button",
+      "game-tappable-orb",
+      "hud-total-energy",
+      "hud-energy-per-sec",
+      "nav-home-tab",
+      "nav-upgrades-tab",
+      "nav-profile-tab",
+      "upgrade-item-{id}-buy-button",
+      "profile-avatar",
+      "leaderboard-rank-{index}"
+    ]
+  },
+  "media": {
+    "tappable_orb": {
+      "url": "https://static.prod-images.emergentagent.com/jobs/077a29af-05c5-4b99-ba0a-30edce77a67a/images/c3cc13176f6051b7f843d21de4b15ea7a52be64704b5e34bb63ced746a1759f7.png",
+      "description": "Main tappable character/orb for the idle game. Use in center of MainGame screen."
+    },
+    "training_dojo": {
+      "url": "https://static.prod-images.emergentagent.com/jobs/077a29af-05c5-4b99-ba0a-30edce77a67a/images/c19b93140327b18ff0cde17f43b29b6582840454710ec85d9a65a55840a5f46c.png",
+      "description": "Icon/Image for Training Dojo upgrade building."
+    },
+    "spirit_generator": {
+      "url": "https://static.prod-images.emergentagent.com/jobs/077a29af-05c5-4b99-ba0a-30edce77a67a/images/f665e9abb851de823a6b2fe8a485f08c00572357227553cd0324c5beaab6c756.png",
+      "description": "Icon/Image for Spirit Bomb Generator upgrade building."
+    },
+    "crystal_mine": {
+      "url": "https://static.prod-images.emergentagent.com/jobs/077a29af-05c5-4b99-ba0a-30edce77a67a/images/4d5612ff4d88a5c45a249df4c09f334cb52d55ac892306e29103640589d9356e.png",
+      "description": "Icon/Image for Ki Crystal Mine upgrade building."
+    },
+    "anime_avatar": {
+      "url": "https://static.prod-images.emergentagent.com/jobs/077a29af-05c5-4b99-ba0a-30edce77a67a/images/293322ff96f51893e1143d1649de6d6b28a81c9cc66203d474cad34f84862ade.png",
+      "description": "Player avatar image used in Profile and Leaderboard screens."
+    },
+    "game_background": {
+      "url": "https://static.prod-images.emergentagent.com/jobs/077a29af-05c5-4b99-ba0a-30edce77a67a/images/a3ca0d6da672542e6b72917a829c7990b685e609aad08f037925d0f56e073483.png",
+      "description": "Main sci-fi anime landscape background for Login and Main Game screens."
+    }
+  },
+  "instructions_to_main_agent": [
+    "Use a Mobile-First layout constrained to typical mobile dimensions (max-w-md mx-auto relative overflow-hidden for desktop rendering), using a full-screen view (h-screen w-full).",
+    "Implement particle effects on the tap action for the orb. You can use standard React state or framer-motion to create floating text (+1).",
+    "Avoid using Shadcn 'Card' for the main layout; instead build custom sci-fi panels using raw div with glowing borders.",
+    "Ensure 'Inter' is NOT used for headings. Use Outfit or Space Grotesk via Tailwind classes or standard imports. If importing fonts, add the Google Fonts link in index.html.",
+    "Ensure the bottom navigation uses a glassmorphism effect (backdrop-blur-xl bg-background-surfaceGlass).",
+    "Use the provided image URLs for the avatar, orb, buildings, and backgrounds.",
+    "Add testIDs (e.g., data-testid='game-tappable-orb') to all interactive elements."
+  ]
+}
