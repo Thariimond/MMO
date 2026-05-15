@@ -107,7 +107,7 @@ export default function LeaderboardScreen() {
             </View>
           ) : null
         }
-        ListFooterComponent={() => <View style={{ height: 100 }} />}
+        ListFooterComponent={() => <View style={{ height: data?.me && data.me.rank > 3 ? 160 : 100 }} />}
       />
 
       {data?.me && data.me.rank > 3 ? (
