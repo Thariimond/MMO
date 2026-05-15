@@ -1,4 +1,4 @@
-"""Galactic Ki Empire — Anime MMORPG Idle Clicker Backend."""
+"""CLICKER MMO — Anime Idle Clicker Multiplayer Backend."""
 from fastapi import FastAPI, APIRouter, HTTPException, Header, Request
 from fastapi.responses import JSONResponse
 from dotenv import load_dotenv
@@ -23,7 +23,7 @@ mongo_url = os.environ["MONGO_URL"]
 client = AsyncIOMotorClient(mongo_url)
 db = client[os.environ["DB_NAME"]]
 
-app = FastAPI(title="Galactic Ki Empire API")
+app = FastAPI(title="CLICKER MMO API")
 api_router = APIRouter(prefix="/api")
 
 logging.basicConfig(
@@ -81,6 +81,46 @@ BUILDINGS_CATALOG = [
         "base_cost": 250000,
         "base_cps": 750,
         "emoji": "⛩️",
+    },
+    {
+        "id": "zenkai_chamber",
+        "name": "Zenkai Chamber",
+        "description": "Breakthrough healing pod that multiplies power growth.",
+        "base_cost": 3000000,
+        "base_cps": 6000,
+        "emoji": "🧬",
+    },
+    {
+        "id": "battle_arena",
+        "name": "Battle Arena",
+        "description": "Epic tournaments generate ki from endless combat.",
+        "base_cost": 40000000,
+        "base_cps": 50000,
+        "emoji": "⚔️",
+    },
+    {
+        "id": "solar_array",
+        "name": "Solar Array",
+        "description": "Harvests cosmic energy directly from the stars.",
+        "base_cost": 500000000,
+        "base_cps": 400000,
+        "emoji": "☀️",
+    },
+    {
+        "id": "dimensional_rift",
+        "name": "Dimensional Rift",
+        "description": "Taps into alternate dimensions for infinite ki.",
+        "base_cost": 6000000000,
+        "base_cps": 3500000,
+        "emoji": "🌀",
+    },
+    {
+        "id": "god_chamber",
+        "name": "God Chamber",
+        "description": "Ultimate divine power source. Ascend beyond limits.",
+        "base_cost": 75000000000,
+        "base_cps": 30000000,
+        "emoji": "👑",
     },
 ]
 CATALOG_BY_ID = {b["id"]: b for b in BUILDINGS_CATALOG}

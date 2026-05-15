@@ -38,9 +38,14 @@ export const ASSETS = {
 };
 
 export const BUILDING_IMAGES: Record<string, string> = {
-  training_dojo: ASSETS.trainingDojo,
-  spirit_generator: ASSETS.spiritGenerator,
-  crystal_mine: ASSETS.crystalMine,
-  energy_reactor: ASSETS.spiritGenerator,
-  power_temple: ASSETS.trainingDojo,
+  training_dojo: require("../assets/buildings/training_dojo.jpg"),
+  spirit_generator: require("../assets/buildings/spirit_generator.jpg"),
+  crystal_mine: require("../assets/buildings/crystal_mine.jpg"),
+  energy_reactor: require("../assets/buildings/energy_reactor.jpg"),
+  power_temple: require("../assets/buildings/power_temple.jpg"),
+  zenkai_chamber: require("../assets/buildings/zenkai_chamber.jpg"),
+  battle_arena: require("../assets/buildings/battle_arena.jpg"),
+  solar_array: require("../assets/buildings/solar_array.jpg"),
+  dimensional_rift: require("../assets/buildings/dimensional_rift.jpg"),
+  god_chamber: require("../assets/buildings/god_chamber.jpg"),
 };

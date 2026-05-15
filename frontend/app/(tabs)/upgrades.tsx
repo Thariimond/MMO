@@ -41,6 +41,31 @@ const BUILDING_META: Record<string, { name: string; description: string; emoji: 
     description: "Ancient temple channels divine ki to your empire.",
     emoji: "⛩️",
   },
+  zenkai_chamber: {
+    name: "Zenkai Chamber",
+    description: "Breakthrough healing pod that multiplies power growth.",
+    emoji: "🧬",
+  },
+  battle_arena: {
+    name: "Battle Arena",
+    description: "Epic tournaments generate ki from endless combat.",
+    emoji: "⚔️",
+  },
+  solar_array: {
+    name: "Solar Array",
+    description: "Harvests cosmic energy directly from the stars.",
+    emoji: "☀️",
+  },
+  dimensional_rift: {
+    name: "Dimensional Rift",
+    description: "Taps into alternate dimensions for infinite ki.",
+    emoji: "🌀",
+  },
+  god_chamber: {
+    name: "God Chamber",
+    description: "Ultimate divine power source. Ascend beyond limits.",
+    emoji: "👑",
+  },
 };
 
 export default function UpgradesScreen() {
